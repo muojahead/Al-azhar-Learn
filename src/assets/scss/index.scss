@@ -1,0 +1,44 @@
+@import "./vars", "./sections.scss","./appHeader.scss","./buttons.scss","./forms.scss","./misc.scss";
+body{
+    *{
+        font-family: 'Tajawal', sans-serif;
+    }
+}
+a{
+    color: $primary !important;
+}
+.app-container{
+    display: grid;
+    grid-template-columns: 70% 30%;
+    @media (max-width: 992px) {
+        display: block;
+    }
+    .sidebar{
+     @media (max-width: 992px) {
+        display: none;
+    }   
+    }
+}
+.app-footer{
+    background-color: #333;
+    color: #fff;
+    .main-footer{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @media (max-width: 768px) {
+            display: block;
+            img{
+                width: 100px;
+            }
+            .title{
+                h5{
+                    font-size: 18px !important;
+                }
+            }
+        }
+    }
+    .sub-footer{
+        background-color: #222;
+    }
+}
